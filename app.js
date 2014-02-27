@@ -36,11 +36,13 @@ application.configure(function() {
 
 	application.use(function(req, res, next) {
 		res.status(404);
-		if(req.accepts('json')) {
-			res.render('404', {'url': req.url})
-		}
+		console.log(application.routes)
 		if(req.accepts('html')) {
-			res.render('404', {'url': req.url})
+			res.render('404', {
+				'path': req.url, 
+				'url': req.host + req.url, 
+				'routes': application.routes
+			})
 		}
 	})
 })
@@ -59,7 +61,7 @@ console.log(date);
 console.log("Nomerce version 1.0.0");
 
 var server = application.listen(3000, function() {
-	console.log('Starting express server at http://' + this['_connectionKey'].replace('4:', ''));
+	console.log('Starting express server at http://' + this.address().address + ":" + this.address().port);
 	console.log('Quit the server with CONTROL-C.');
 });
 

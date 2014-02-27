@@ -1,8 +1,51 @@
 <!DOCTYPE html>
-<html>
-<head></head>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page not found at {{ path }}</title>
+	<meta name="robots" content="NONE,NOARCHIVE">
+	<style type="text/css">
+		html * { padding:0; margin:0; }
+		body * { padding:10px 20px; }
+		body * * { padding:0; }
+		body { font:small sans-serif; background:#eee; }
+		body>div { border-bottom:1px solid #ddd; }
+		h1 { font-weight:normal; margin-bottom:.4em; color: #fff; }
+		h1 span { font-size:60%; color:#E699FF; font-weight:normal; }
+		table { border:none; border-collapse: collapse; width:100%; }
+		td, th { vertical-align:top; padding:2px 3px; color: #fff;}
+		th { width:12em; text-align:right; color:#E699FF; padding-right:.5em; }
+		#info { background:#f6f6f6; }
+		#info ol { margin: 0.5em 4em; }
+		#info ol li { font-family: monospace; }
+		#summary { background: #660099; }
+		#navbar { float: left; display: block; }
+	</style>
+</head>
 <body>
-	<p><strong>{{ url }}</strong></p>
-	<p>Page not found</p>
+	<div id="summary">
+		<h1>Page not found <span>(404)</span></h1>
+		<table class="meta">
+		  <tr>
+			<th>Request Method:</th>
+			<td>GET</td>
+		  </tr>
+		  <tr>
+			<th>Request URL:</th>
+		  <td>{{ url }}</td>
+		  </tr>
+		</table>
+	</div>
+	<div id="info">
+		<p>Are available the following urls:</p>
+		<ol>
+		{% for route in routes.get %}
+			<li>
+				<a href="{{ route.path }}">{{ route.path }}</a>
+			</li>
+		{% endfor %}
+		</ol>
+		<p>The current URL, <code>{{ path }}</code>, not available.</p>
+	</div>
 </body>
 </html>
