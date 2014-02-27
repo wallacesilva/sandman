@@ -1,0 +1,13 @@
+{
+  "name": "nomerce",
+  "description": "A project using node",
+  "author": "Patrick Porto <patrick.s.porto@gmail.com>",
+  "dependencies": {
+    "mongoose": "==3.8.7",
+    "swig": "==1.3.2",
+    "express": "==3.0.0",
+    "less": ">=1.6.3",
+    "less-middleware": "~0.1.15",
+    "jasmine-node": "~1.3.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+	"system.data.months": {
+		"Jan": "January",
+		"Fab": "February",
+		"Mar": "March",
+		"Apr": "April",
+		"May": "May",
+		"June": "June",
+		"July": "July",
+		"Aug": "August",
+		"Sept": "September",
+		"Oct": "October",
+		"Nov": "November",
+		"Dec": "December"
+	},
+	"system.data.weeks": {
+		"Sun": "Sunday",
+		"Mon": "Monday",
+		"Tues": "Tuesday",
+		"Wed": "Wednesday",
+		"Thurs": "Thursday",
+		"Fri": "Friday",
+		"Sat": "Saturday"
+	}
+}
