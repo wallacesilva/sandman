@@ -16,7 +16,7 @@ fs.readdirSync('./controllers').forEach(function(controller) {
 
 var date = new Date().format("F d, Y - H:i:s");
 console.log(date);
-console.log("Nomerce version 1.0.0");
+console.log("Sandman version 1.0.0");
 
 var server = application.listen(3000, function() {
 	console.log('Starting express server at http://' + this.address().address + ":" + this.address().port);

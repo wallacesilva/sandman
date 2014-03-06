@@ -1,6 +1,6 @@
 {
-  "name": "nomerce",
-  "description": "A project using node",
+  "name": "Sandman",
+  "description": "A e-commerce using node",
   "author": "Patrick Porto <patrick.s.porto@gmail.com>",
   "dependencies": {
     "mongoose": "==3.8.7",
